@@ -268,11 +268,11 @@ export default function Hero() {
   return (
     <section
       className="flex min-h-screen items-center gap-8 px-4 lg:px-6"
-      style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}
+      style={{ overflowX: "hidden", width: "100%", flexDirection: "row", flexWrap: "nowrap" }}
     >
 
       {/* ── Left column ── */}
-      <div style={{ flex: "0 0 auto", maxWidth: 560, textAlign: "center" }}>
+      <div style={{ flex: "1 1 auto", minWidth: 0, width: "100%", maxWidth: 560, textAlign: "center", padding: "0 24px", boxSizing: "border-box" }}>
 
         <motion.span
           variants={item(0, reduced)}
@@ -306,7 +306,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           className="font-bold leading-tight"
-          style={{ fontSize: "clamp(2.5rem, 8vw, 7rem)" }}
+          style={{ fontSize: "clamp(2rem, 10vw, 7rem)" }}
         >
           <div>
             <span
@@ -343,8 +343,6 @@ export default function Hero() {
           animate="visible"
           className="text-subheading text-text-secondary"
           style={{
-            padding: "0 16px",
-            boxSizing: "border-box",
             width: "100%",
             maxWidth: "100%",
             margin: "0 auto 32px",
