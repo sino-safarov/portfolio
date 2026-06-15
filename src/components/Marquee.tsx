@@ -44,6 +44,7 @@ export default function Marquee() {
     <div
       aria-label="Skills and highlights"
       className="h-6 w-full overflow-hidden border-y border-border bg-surface"
+      style={{ maxWidth: "100vw", width: "100%" }}
     >
       <div
         className={`${styles.track} flex h-full items-center`}

@@ -266,7 +266,10 @@ export default function Hero() {
   useParticleCanvas(canvasRef, reduced);
 
   return (
-    <section className="flex min-h-screen items-center gap-8 px-4 lg:px-6">
+    <section
+      className="flex min-h-screen items-center gap-8 px-4 lg:px-6"
+      style={{ overflowX: "hidden", width: "100%", maxWidth: "100vw" }}
+    >
 
       {/* ── Left column ── */}
       <div style={{ flex: "0 0 auto", maxWidth: 560, textAlign: "center" }}>
@@ -281,6 +284,10 @@ export default function Hero() {
             background: "rgba(26,92,58,0.07)",
             padding: "6px 14px",
             borderRadius: "100px",
+            maxWidth: "90%",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
           }}
         >
           Available for internships · Prague
@@ -299,7 +306,7 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           className="font-bold leading-tight"
-          style={{ fontSize: "clamp(4rem, 8vw, 7rem)" }}
+          style={{ fontSize: "clamp(2.5rem, 8vw, 7rem)" }}
         >
           <div>
             <span
@@ -335,7 +342,14 @@ export default function Hero() {
           initial="hidden"
           animate="visible"
           className="text-subheading text-text-secondary"
-          style={{ maxWidth: 520, margin: "0 auto 32px" }}
+          style={{
+            padding: "0 16px",
+            boxSizing: "border-box",
+            width: "100%",
+            maxWidth: "100%",
+            margin: "0 auto 32px",
+            wordBreak: "break-word",
+          }}
         >
           Turning messy data into clear decisions.
           <br />
